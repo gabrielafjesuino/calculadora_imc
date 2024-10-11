@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+}
+
+:root {
+    --azul: #1f5eaf;
+    --laranja: #ff5202;
+    --laranjaescuro: #d64502;
+    --branco: white;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.alinhando {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+    border-radius: 10px; 
+}
+
+.margin-a {
+    margin: 30px 280px;
+}
+
+.padding-a {
+    padding: 35px 35px;
+}
+
+.padding-b {
+    padding: 0 34px;
+}
+
+.color-b {
+    background-color: var(--branco);
+    color: var(--azul);
+}
+
+.color-c {
+    color: var(--branco);
+}
+
+.espacamento-c {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.aumento1 {
+    width: 417px;
+}
+
+.aumento2 {
+    width: 364px;
+}
+
+.p {
+    border: 3px solid var(--laranja);
+    font-size: 14px;
+    padding: 10px;
+    margin: 5px 30px;
+    text-align: justify;
+}
+
+.botao {
+    padding: 10px 15px;
+    background-color: var(--laranja);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: var(--laranjaescuro);
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Calculadora - IMC</title>
+</head>
+<body>
+    <section>
+
+        <div class="alinhando">
+            <div class="container-a margin-a padding-a">
+                <div class="padding-b color-b">
+                    <h2>CALCULADORA - ÍNDICE DE MASSA CORPORAL (IMC)</h2>
+                </div>
+
+                <br>
+
+                <div class="color-c espacamento-c">
+                    <label for="inputPeso">Informe seu peso (em kg):</label>
+                    <input class="aumento1" type="number" id="inputPeso" step="0.1" placeholder="Ex: 70,5" required>
+                </div>
+
+                <br>
+
+                <div class="color-c espacamento-c">
+                    <label for="inputAltura">Informe sua altura (em metros):</label>
+                    <input class="aumento2" type="number" id="inputAltura" step="0.1" placeholder="Ex: 1.70" required>
+                </div>
+
+                <br>
+
+                <button id="botaoEnviar" type="button" class="botao">CALCULAR ></button>
+            </div>
+
+            <div class="p">
+                <p>O Índice de Massa Corporal (IMC) avalia a relação entre peso e altura, indicando se uma pessoa está em um peso saudável. Embora não considere a composição corporal, é uma ferramenta útil para identificar riscos à saúde. Os resultados são classificados em categorias: abaixo do peso, peso normal, sobrepeso e obesidade. Consulte um profissional de saúde para uma análise mais detalhada.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+        function calcularImc() {
+            var peso = parseFloat(document.getElementById("inputPeso").value)
+            var altura = parseFloat(document.getElementById("inputAltura").value)
+            
+            if (peso > 0 && altura > 0) {
+                var imc = peso / (altura * altura)
+                var categoria
+
+                if (imc < 18.5) {
+                    categoria = "Abaixo do peso"
+                } else if (imc >= 18.5 && imc < 24.9) {
+                    categoria = "Peso normal"
+                } else if (imc >= 25 && imc < 29.9) {
+                    categoria = "Sobrepeso"
+                } else {
+                    categoria = "Obesidade"
+                }
+
+                alert('Índice de Massa Corporal (IMC): ' + imc + ' - Categoria: ' + categoria)
+            } else {
+                alert('Insira valores válidos para peso e altura!')
+            }
+        }
+
+        var botao = document.getElementById("botaoEnviar")
+        botao.addEventListener('click', calcularImc)
+
+    </script>
+</body>
+</html>
